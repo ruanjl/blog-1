@@ -111,7 +111,7 @@ services:
       NGINX_PORT: 9123
 ```
 
-### 3.1、创建inc.cnf
+### 3.1、在archery目录下面创建inc.cnf
 
 设置接下来要创建的mysql账号密码
 
