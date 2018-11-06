@@ -94,6 +94,8 @@ services:
     restart: always
     ports:
       - "6669:6669"
+    volumes:
+      - "./inc.cnf:/etc/inc.cnf"
 
   archery:
     image: registry.cn-hangzhou.aliyuncs.com/lihuanhuan/archery
@@ -103,18 +105,48 @@ services:
       - "9123:9123"
     volumes:
       - "./archery/settings.py:/opt/archery/archery/settings.py"
+      - "./downloads:/opt/archery/downloads"
     command: ["bash","/opt/archery/src/docker/startup.sh"]
     environment:
       NGINX_PORT: 9123
 ```
 
-### 4、登录mysql创建数据库：
-使用工具创建数据库：archery
+### 3.1、创建inc.cnf
+
+设置接下来要创建的mysql账号密码
+
+```java
+[inception]
+general_log=1
+general_log_file=inception.log
+port=6669
+socket=/tmp/inc.socket
+character-set-client-handshake=0
+character-set-server=utf8
+inception_remote_system_password=Mxc1993
+inception_remote_system_user=ciwei
+inception_remote_backup_port=3306
+inception_remote_backup_host=118.184.218.184
+inception_support_charset=utf8,utf8mb4
+inception_enable_nullable=0
+inception_check_primary_key=1
+inception_check_column_comment=1
+inception_check_table_comment=1
+inception_osc_on=OFF
+inception_osc_bin_dir=/usr/bin
+inception_osc_min_table_size=1
+inception_osc_chunk_time=0.1
+inception_enable_blob_type=1
+inception_check_column_default_value=1
+```
 	  
-### 5、#启动
+### 4、#启动
 ```java
 docker-compose -f docker-compose.yml up -d
 ```
+
+### 5、登录mysql创建数据库：
+使用工具创建数据库：archery
 
 6、#表结构初始化
 ```java
@@ -152,13 +184,38 @@ docker logs archery
 功能说明：SOAR(SQL Optimizer And Rewriter)是一个对SQL进行优化和改写的自动化工具。 由小米人工智能与云平台的数据库团队开发与维护。项目地址
 相关配置：
 在系统管理-配置项管理中修改SOAR_PATH为程序路径，路径需要完整，docker部署的请修改为'/opt/soar'
-修改SOAR_TEST_DSN为测试环境连接信息：ciwei:Mxc1993@!@118.184.218.184:3306/me2mes
+修改SOAR_TEST_DSN为测试环境连接信息：ciwei:Mxc1993@118.184.218.184:3306/me2mes (me2mes是自定义的数据库)
 
 SOAR_TEST_DSN的连接地址：mysql需要授权用户GRANT ALL
 
 ```java
-GRANT ALL PRIVILEGES ON *.* TO 'ciwei'@'118.184.218.184' IDENTIFIED BY 'Mxc1993' WITH GRANT OPTION; 
+GRANT ALL PRIVILEGES ON *.* TO 'ciwei'@'%' IDENTIFIED BY 'Mxc1993' WITH GRANT OPTION;
 FLUSH PRIVILEGES;
 ```
 
-![](/images/20181105232659.png)
+* 配置Inception
+
+> 里面填写inception和mysql的地址端口，mysql的用户名密码
+
+![](/images/20181106224403.png)
+
+### SQL上线功能使用
+
+* 工作流
+
+> 导入sql文件可以执行多级审批流程 最后立即执行会执行sql语句 需要配置审批流程
+
+功能说明：项目提供简单的多级审批流配置，审批流程和资源组以及审批类型相关，不同资源组和审批类型可以配置不同的审批流程，审批流程配置的是权限组，可避免审批人单点的问题
+相关配置：
+在系统管理-配置项管理页面，可进行组工单审批流程的配置
+对于SQL上线和SQL查询权限工单，如果用户拥有('sql_review', '审核SQL上线工单')、('sql_execute', '执行SQL上线工单')、('query_review', '审核查询权限')权限，就可以查看到当前用户所在资源组的所有工单
+工单待审核时，关联当前审批权限组的所有用户，均可审核所在资源组的工单（资源组隔离）
+待办列表包含所有当前用户可审核的所有工单
+
+* SQL审核
+
+功能说明：SQL上线和审核功能依靠Inception审核平台，建议使用前先完整阅读Inception的[项目文档](https://github.com/hhyo/inception-document)
+相关配置：
+在系统管理-配置项管理，有Inception配置项，需要按照配置说明进行配置
+
+![](/images/20181106203432.png)
