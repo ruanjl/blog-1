@@ -1,0 +1,16 @@
+(node:29250) [DEP0061] DeprecationWarning: fs.SyncWriteStream is deprecated.
+INFO  Start processing
+INFO  Hexo is running at http://localhost:4000/. Press Ctrl+C to stop.
+(node:28790) [DEP0061] DeprecationWarning: fs.SyncWriteStream is deprecated.
+./start.sh: line 3: 28790 Killed                  hexo server --silent
+(node:29857) [DEP0061] DeprecationWarning: fs.SyncWriteStream is deprecated.
+./start.sh: line 3: 29857 Hangup                  hexo server --silent
+(node:9183) [DEP0061] DeprecationWarning: fs.SyncWriteStream is deprecated.
+./start.sh: 行 3:  9183 挂起                  hexo server --silent
+(node:18164) [DEP0061] DeprecationWarning: fs.SyncWriteStream is deprecated.
+INFO  Deploying: git
+INFO  Clearing .deploy_git folder...
+INFO  Copying files from public folder...
+INFO  Copying files from extend dirs...
+[master 5ccb327] Site updated: 2018-08-15 22:54:53
+ 68 files changed, 325 insertions(+), 325 deletions(-)

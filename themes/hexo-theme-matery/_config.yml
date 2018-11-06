@@ -1,0 +1,307 @@
+# main menu navigation url and icon
+# 配置菜单导航的名称、路径和图标icon.
+menu:
+  首页:
+    url: /
+    icon: fa-home
+  博客:
+    url: /Home
+    icon: fa-home
+  前端:
+    url: /GuideV2/FrontEndGuide
+    icon: fa-archive
+  生活:
+    url: /garlly
+    icon: fa-bicycle
+  标签:
+    url: /tags
+    icon: fa-tags
+  分类:
+    url: /categories
+    icon: fa-bookmark
+  归档:
+    url: /archives
+    icon: fa-archive
+  关于:
+    url: /about
+    icon: fa-user-circle-o
+
+# index page dream text,
+# 配置首页显示"梦想"的语句.
+dream:
+  enable: true
+  text: 要用多少个晴天 交换多少张相片 还记得锁在抽屉里面的滴滴点点 小而温馨的空间 因为有你在身边
+
+# Whether to display the title of the recommended posts
+# 是否显示推荐文章的标题
+recommend:
+  showTitle: true
+
+# Configure website favicon and LOGO
+# 配置网站favicon和网站LOGO
+favicon: /favicon.png
+logo: /medias/logo.png
+
+# The configuration of the second button in the home banner,
+# including the display name of the button, the font awesome icon, and the hyperlink to the button.
+# 首页 banner 中的第二个按钮的配置，包括按钮的显示名称、font awesome图标和按钮的超链接.
+indexbtn:
+  enable: true
+  name: Github
+  icon: fa-github-alt
+  url: https://github.com/ciweigg2
+
+# Whether to activate the Post TOC.
+# 是否激活文章 TOC 功能.
+toc:
+  enable: false
+
+# 是否激活文章末尾的打赏功能，默认激活（你替换为的你自己的微信、支付宝二维码图片、或者使用网络图片也可以）.
+reward:
+  enable: true
+  title: 你的赏识是我前进的动力
+  wechat: /medias/reward/wechat.png
+  alipay: /medias/reward/alipay.jpg
+
+# profile in about page, including avatars, career, and personal introductions.
+# 在”关于”页面中配置个人信息，包括头像、职业和个人介绍.
+profile:
+  avatar: /medias/avatar.jpg
+  career: Software Engineer
+  introduction: If you wish to succeed, you should use persistence as your good friend, experience as your reference, prudence as your brother and hope as your sentry.
+
+# config my projects informations in about page.
+# If you don't want to display this `My Projects` content, you can deactivate or delete this configuration.
+# 在“关于”页面配置"我的项目"信息，如果你不需要这些信息则可以将其设置为不激活或者将其删除.
+myProjects:
+  enable: true
+  data:
+    hexo-theme-matery:
+      icon: fa-meetup
+      iconBackground: 'linear-gradient(to bottom right, #66BB6A 0%, #81C784 100%)'
+      url: http://github.com/blinkfox/hexo-theme-matery
+      desc: This is a Hexo blog theme with 'Material Design' and responsive design.
+    zealt:
+        icon: fa-database
+        iconBackground: 'linear-gradient(to bottom right, #F06292 0%, #EF5350 100%)'
+        url: https://github.com/blinkfox/zealot
+        desc: 一个轻量级的SQL和参数动态生成工具库
+    typora-vue-theme:
+        icon: fa-file-text-o
+        iconBackground: 'linear-gradient(to bottom right, #29B6F6 0%, #1E88E5 100%)'
+        url: https://github.com/blinkfox/typora-vue-theme
+        desc: This is a typora theme inspired by Vue document style.
+
+# config my skills informations in about page.
+# If you don't want to display this `My Skills` content, you can deactivate or delete this configuration.
+# 在“关于”页面配置"我的技能"信息，如果你不需要这些信息则可以将其设置为不激活或者将其删除.
+mySkills:
+  enable: true
+  data:
+    Java:
+      background: 'linear-gradient(to right, #FF0066 0%, #FF00CC 100%)'
+      percent: 85%
+    JavaScript:
+      background: 'linear-gradient(to right, #9900FF 0%, #CC66FF 100%)'
+      percent: 80%
+    HTML5:
+      background: 'linear-gradient(to right, #2196F3 0%, #42A5F5 100%)'
+      percent: 80%
+    CSS:
+      background: 'linear-gradient(to right, #00BCD4 0%, #80DEEA 100%)'
+      percent: 70%
+    SQL:
+      background: 'linear-gradient(to right, #4CAF50 0%, #81C784 100%)'
+      percent: 90%
+    程序设计:
+      background: 'linear-gradient(to right, #FFEB3B 0%, #FFF176 100%)'
+      percent: 75%
+
+# config gallery of my photos in about page.
+# If you don't want to display this `Gallery` content, you can deactivate or delete this configuration.
+# 在“关于”页面配置"我的相册"图片，如果你不需要这些信息则可以将其设置为不激活或者将其删除.
+myGallery:
+  enable: true
+  data:
+    - /medias/featureimages/0.jpg
+    - /medias/featureimages/1.jpg
+    - /medias/featureimages/2.jpg
+
+# Whether to display post-calender in the `archive` page
+# 设置在归档页面中是否显示'文章日历'控件
+postCalendar: true
+
+# the Gitalk config，default disabled
+# Gitalk 评论模块的配置，默认为不激活
+gitalk:
+  enable: true
+  owner: ciweigg2
+  repo: ciweigg2.github.io
+  oauth:
+    clientId: 4e9a7bfed30119302290
+    clientSecret: 28f6acd9ebbeff567a56b52da427a6622f861607
+  admin:
+    - ciweigg2
+
+# the Gitment config，default disabled
+# Gitment 评论模块的配置，默认为不激活
+gitment:
+  enable: false
+  owner:
+  repo:
+  oauth:
+    clientId:
+    clientSecret:
+
+# disqus config, default disabled
+# Disqus评论模块的配置，默认为不激活
+disqus:
+  enable: false
+  shortname:
+
+# Livere comment configuration, the default is not activated
+# Livere 来必力评论模块的配置，默认为不激活
+livere:
+  enable: false
+  uid:
+
+# Whether to display fork me on github icon and link, default true, You can change it to your repo address
+# 配置是否在 header 中显示 fork me on github 的图标，默认为true，你可以修改为你的仓库地址.
+githubLink:
+  enable: true
+  url: https://github.com/blinkfox/hexo-theme-matery
+  title: Fork Me
+
+search:
+  path: search.xml
+  field: post
+
+# The post featured images that needs to be displayed when there is no image.
+# 无文章特色图片时需要显示的文章特色图片.
+featureImages: 
+- http://ciwei2.ufile.ucloud.com.cn/0.jpg
+- http://ciwei2.ufile.ucloud.com.cn/1.jpg
+- http://ciwei2.ufile.ucloud.com.cn/2.jpg
+- http://ciwei2.ufile.ucloud.com.cn/3.jpg
+- http://ciwei2.ufile.ucloud.com.cn/4.jpg
+- http://ciwei2.ufile.ucloud.com.cn/5.jpg
+- http://ciwei2.ufile.ucloud.com.cn/6.jpg
+- http://ciwei2.ufile.ucloud.com.cn/7.jpg
+- http://ciwei2.ufile.ucloud.com.cn/8.jpg
+- http://ciwei2.ufile.ucloud.com.cn/9.jpg
+- http://ciwei2.ufile.ucloud.com.cn/10.jpg
+- http://ciwei2.ufile.ucloud.com.cn/11.jpg
+- http://ciwei2.ufile.ucloud.com.cn/12.jpg
+- http://ciwei2.ufile.ucloud.com.cn/13.jpg
+- http://ciwei2.ufile.ucloud.com.cn/14.jpg
+- http://ciwei2.ufile.ucloud.com.cn/15.jpg
+- http://ciwei2.ufile.ucloud.com.cn/16.jpg
+- http://ciwei2.ufile.ucloud.com.cn/17.jpg
+- http://ciwei2.ufile.ucloud.com.cn/18.jpg
+- http://ciwei2.ufile.ucloud.com.cn/19.jpg
+- http://ciwei2.ufile.ucloud.com.cn/20.jpg
+- http://ciwei2.ufile.ucloud.com.cn/21.jpg
+- http://ciwei2.ufile.ucloud.com.cn/22.jpg
+- http://ciwei2.ufile.ucloud.com.cn/23.jpg
+- http://ciwei2.ufile.ucloud.com.cn/24.jpg
+- http://ciwei2.ufile.ucloud.com.cn/25.jpg
+- http://ciwei2.ufile.ucloud.com.cn/26.jpg
+- http://ciwei2.ufile.ucloud.com.cn/27.jpg
+- http://ciwei2.ufile.ucloud.com.cn/28.jpg
+- http://ciwei2.ufile.ucloud.com.cn/29.jpg
+- http://ciwei2.ufile.ucloud.com.cn/30.jpg
+- http://ciwei2.ufile.ucloud.com.cn/31.jpg
+- http://ciwei2.ufile.ucloud.com.cn/32.jpg
+- http://ciwei2.ufile.ucloud.com.cn/33.jpg
+- http://ciwei2.ufile.ucloud.com.cn/34.jpg
+- http://ciwei2.ufile.ucloud.com.cn/35.jpg
+- http://ciwei2.ufile.ucloud.com.cn/36.jpg
+- http://ciwei2.ufile.ucloud.com.cn/37.jpg
+- http://ciwei2.ufile.ucloud.com.cn/38.jpg
+- http://ciwei2.ufile.ucloud.com.cn/39.jpg
+- http://ciwei2.ufile.ucloud.com.cn/40.jpg
+- http://ciwei2.ufile.ucloud.com.cn/41.jpg
+- http://ciwei2.ufile.ucloud.com.cn/42.jpg
+- http://ciwei2.ufile.ucloud.com.cn/43.jpg
+- http://ciwei2.ufile.ucloud.com.cn/44.jpg
+- http://ciwei2.ufile.ucloud.com.cn/45.jpg
+- http://ciwei2.ufile.ucloud.com.cn/46.jpg
+- http://ciwei2.ufile.ucloud.com.cn/47.jpg
+- http://ciwei2.ufile.ucloud.com.cn/48.jpg
+- http://ciwei2.ufile.ucloud.com.cn/49.jpg
+- http://ciwei2.ufile.ucloud.com.cn/50.jpg
+- http://ciwei2.ufile.ucloud.com.cn/51.jpg
+- http://ciwei2.ufile.ucloud.com.cn/52.jpg
+- http://ciwei2.ufile.ucloud.com.cn/53.jpg
+- http://ciwei2.ufile.ucloud.com.cn/54.jpg
+- http://ciwei2.ufile.ucloud.com.cn/55.jpg
+- http://ciwei2.ufile.ucloud.com.cn/56.jpg
+- http://ciwei2.ufile.ucloud.com.cn/57.jpg
+- http://ciwei2.ufile.ucloud.com.cn/58.jpg
+- http://ciwei2.ufile.ucloud.com.cn/59.jpg
+- http://ciwei2.ufile.ucloud.com.cn/60.jpg
+- http://ciwei2.ufile.ucloud.com.cn/61.jpg
+- http://ciwei2.ufile.ucloud.com.cn/62.jpg
+- http://ciwei2.ufile.ucloud.com.cn/63.jpg
+- http://ciwei2.ufile.ucloud.com.cn/64.jpg
+- http://ciwei2.ufile.ucloud.com.cn/65.jpg
+- http://ciwei2.ufile.ucloud.com.cn/66.jpg
+- http://ciwei2.ufile.ucloud.com.cn/67.jpg
+- http://ciwei2.ufile.ucloud.com.cn/68.jpg
+- http://ciwei2.ufile.ucloud.com.cn/69.jpg
+- http://ciwei2.ufile.ucloud.com.cn/70.jpg
+- http://ciwei2.ufile.ucloud.com.cn/71.jpg
+- http://ciwei2.ufile.ucloud.com.cn/72.jpg
+- http://ciwei2.ufile.ucloud.com.cn/73.jpg
+- http://ciwei2.ufile.ucloud.com.cn/74.jpg
+- http://ciwei2.ufile.ucloud.com.cn/75.jpg
+- http://ciwei2.ufile.ucloud.com.cn/76.jpg
+- http://ciwei2.ufile.ucloud.com.cn/77.jpg
+- http://ciwei2.ufile.ucloud.com.cn/78.jpg
+- http://ciwei2.ufile.ucloud.com.cn/79.jpg
+- http://ciwei2.ufile.ucloud.com.cn/80.jpg
+- http://ciwei2.ufile.ucloud.com.cn/81.jpg
+- http://ciwei2.ufile.ucloud.com.cn/82.jpg
+- http://ciwei2.ufile.ucloud.com.cn/83.jpg
+- http://ciwei2.ufile.ucloud.com.cn/84.jpg
+- http://ciwei2.ufile.ucloud.com.cn/85.jpg
+- http://ciwei2.ufile.ucloud.com.cn/86.jpg
+- http://ciwei2.ufile.ucloud.com.cn/87.jpg
+- http://ciwei2.ufile.ucloud.com.cn/88.jpg
+- http://ciwei2.ufile.ucloud.com.cn/89.jpg
+- http://ciwei2.ufile.ucloud.com.cn/90.jpg
+- http://ciwei2.ufile.ucloud.com.cn/91.jpg
+- http://ciwei2.ufile.ucloud.com.cn/92.jpg
+- http://ciwei2.ufile.ucloud.com.cn/93.jpg
+- http://ciwei2.ufile.ucloud.com.cn/94.jpg
+- http://ciwei2.ufile.ucloud.com.cn/95.jpg
+- http://ciwei2.ufile.ucloud.com.cn/96.jpg
+- http://ciwei2.ufile.ucloud.com.cn/97.jpg
+- http://ciwei2.ufile.ucloud.com.cn/98.jpg
+- http://ciwei2.ufile.ucloud.com.cn/99.jpg
+- http://ciwei2.ufile.ucloud.com.cn/100.jpg
+- http://ciwei2.ufile.ucloud.com.cn/101.jpg
+- http://ciwei2.ufile.ucloud.com.cn/102.jpg
+- http://ciwei2.ufile.ucloud.com.cn/103.jpg
+- http://ciwei2.ufile.ucloud.com.cn/104.jpg
+- http://ciwei2.ufile.ucloud.com.cn/105.jpg
+- http://ciwei2.ufile.ucloud.com.cn/106.jpg
+- http://ciwei2.ufile.ucloud.com.cn/107.jpg
+- http://ciwei2.ufile.ucloud.com.cn/108.jpg
+- http://ciwei2.ufile.ucloud.com.cn/109.jpg
+- http://ciwei2.ufile.ucloud.com.cn/110.jpg
+- http://ciwei2.ufile.ucloud.com.cn/111.jpg
+- http://ciwei2.ufile.ucloud.com.cn/112.jpg
+- http://ciwei2.ufile.ucloud.com.cn/113.jpg
+- http://ciwei2.ufile.ucloud.com.cn/114.jpg
+- http://ciwei2.ufile.ucloud.com.cn/115.jpg
+- http://ciwei2.ufile.ucloud.com.cn/116.jpg
+- http://ciwei2.ufile.ucloud.com.cn/117.jpg
+- http://ciwei2.ufile.ucloud.com.cn/118.jpg
+- http://ciwei2.ufile.ucloud.com.cn/119.jpg
+- http://ciwei2.ufile.ucloud.com.cn/120.jpg
+- http://ciwei2.ufile.ucloud.com.cn/121.jpg
+- http://ciwei2.ufile.ucloud.com.cn/122.jpg
+- http://ciwei2.ufile.ucloud.com.cn/123.jpg
+- http://ciwei2.ufile.ucloud.com.cn/124.jpg
+- http://ciwei2.ufile.ucloud.com.cn/125.jpg

@@ -1,0 +1,156 @@
+# Hexo Configuration
+## Docs: https://hexo.io/docs/configuration.html
+## Source: https://github.com/hexojs/hexo/
+
+# Site
+title: Kaisa
+subtitle: Ciwei
+description: 躺在你学校的操场看星空 教室里的灯还亮着你没走 记得 我写给你的情书 都什么年代了 到现在我还在写着 总有一天总有一年会发现 有人默默的陪在你的身边
+keywords:
+author: Ciwei
+language: zh-CN
+timezone:
+
+# URL
+## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
+url: http://ciweigg2.github.io
+root: /
+permalink: :year/:month/:day/:title/
+permalink_defaults:
+
+# Directory
+source_dir: source
+public_dir: public
+tag_dir: tags
+archive_dir: archives
+category_dir: categories
+code_dir: downloads/code
+i18n_dir: :lang
+skip_render:
+
+# Writing
+new_post_name: :title.md # File name of new posts
+default_layout: post
+titlecase: false # Transform title into titlecase
+external_link: true # Open external links in new tab
+filename_case: 0
+render_drafts: false
+post_asset_folder: false
+relative_link: false
+future: true
+highlight:
+  enable: false
+  line_number: true
+  auto_detect: false
+  tab_replace:
+  
+# Home page setting
+# path: Root path for your blogs index page. (default = '')
+# per_page: Posts displayed per page. (0 = disable pagination)
+# order_by: Posts order. (Order by date descending by default)
+index_generator:
+  path: ''
+  per_page: 12
+  order_by: -date
+  
+# Category & Tag
+default_category: uncategorized
+category_map:
+tag_map:
+
+# Date / Time format
+## Hexo uses Moment.js to parse and display date
+## You can customize the date format as defined in
+## http://momentjs.com/docs/#/displaying/format/
+date_format: YYYY-MM-DD
+time_format: HH:mm:ss
+
+# Pagination
+## Set per_page to 0 to disable pagination
+per_page: 10
+pagination_dir: page
+
+# Extensions
+## Plugins: https://hexo.io/plugins/
+## Themes: https://hexo.io/themes/
+theme: hexo-theme-matery
+
+# Deployment
+## Docs: https://hexo.io/docs/deployment.html
+#deploy:
+#  type:
+
+# Deployment
+## Docs: https://hexo.io/docs/deployment.html
+deploy:
+#- type: baidu_url_submitter
+  type: git
+  repo: git@github.com:ciweigg2/ciweigg2.github.io.git
+  branch: master
+    
+
+#search:
+#  path: search.json
+#  field: post
+#  format: html
+#  limit: 10000
+
+search:
+  path: search.xml
+  field: post
+
+#baidu_url_submit:
+ # count: 100 # 提交最新的一个链接
+ # host: mydearest.cn # 在百度站长平台中注册的域名
+ # token: Q8b5dNAOTwPHnfKJ # 请注意这是您的秘钥， 所以请不要把博客源代码发布在公众仓库里!
+ # path: baidu_urls.txt # 文本文档的地址， 新链接会保存在此文本文档里
+
+
+sitemap:
+  path: sitemap.xml
+baidusitemap:
+  path: baidusitemap.xml 
+
+feed:
+  type: rss2
+  path: rss2.xml
+  limit: 20
+
+# Extensions
+## Plugins: http://hexo.io/plugins/
+plugins: 
+  hexo-generate-feed
+  - hexo-generator-sitemap
+  - hexo-generator-baidu-sitemap
+  - hexo-baidu-url-submit
+
+marked:
+  gfm: true
+  breaks: false
+
+backup:
+  type: git
+  message: update backup
+  repository:
+    origin: git@github.com:ciweigg2/blog.git,master
+
+admin:
+  username: ciwei
+  password_hash: $2a$10$n8cPKefTqlz.wwJZrvyEReUTa9/B6otlHWnx6F2JwkrbFHouMj1wa
+  secret: rgmyn
+  qiniuCfg:
+    imageslim: true  # 启动图片瘦身，仅华东区bucket可以使用
+    AccessKey: x0Wa4J0QRobQEl0xw6qXrJlQQqpTcidMCX4Rja9o
+    SecretKey: 8a_ITonRJC2zimjiyzqhUiZRfh2Olt6priuychH0
+    BucketName: ciwei
+    bucketHost: oisa91ton.bkt.clouddn.com
+
+permalink_pinyin:
+  enable: true
+  separator: '-' # default: '-'
+
+prism_plugin:
+  mode: 'preprocess'    # realtime/preprocess
+  theme: 'duotone-light'
+  line_number: false    # default false
+  custom_css:
