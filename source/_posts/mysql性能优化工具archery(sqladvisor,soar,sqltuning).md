@@ -155,6 +155,7 @@ docker logs archery
 修改SOAR_TEST_DSN为测试环境连接信息：ciwei:Mxc1993@!@118.184.218.184:3306/me2mes
 
 SOAR_TEST_DSN的连接地址：mysql需要授权用户GRANT ALL
+
 ```java
 GRANT ALL PRIVILEGES ON *.* TO 'ciwei'@'118.184.218.184' IDENTIFIED BY 'Mxc1993' WITH GRANT OPTION; 
 FLUSH PRIVILEGES;
