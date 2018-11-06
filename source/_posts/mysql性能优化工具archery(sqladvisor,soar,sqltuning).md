@@ -152,6 +152,12 @@ docker logs archery
 功能说明：SOAR(SQL Optimizer And Rewriter)是一个对SQL进行优化和改写的自动化工具。 由小米人工智能与云平台的数据库团队开发与维护。项目地址
 相关配置：
 在系统管理-配置项管理中修改SOAR_PATH为程序路径，路径需要完整，docker部署的请修改为'/opt/soar'
-修改SOAR_TEST_DSN为测试环境连接信息：root:Mxc1993@!@118.184.218.184:3306/me2mes
+修改SOAR_TEST_DSN为测试环境连接信息：ciwei:Mxc1993@!@118.184.218.184:3306/me2mes
+
+SOAR_TEST_DSN的连接地址：mysql需要授权用户GRANT ALL
+```java
+GRANT ALL PRIVILEGES ON *.* TO 'ciwei'@'118.184.218.184' IDENTIFIED BY 'Mxc1993' WITH GRANT OPTION; 
+FLUSH PRIVILEGES;
+```
 
 ![](/images/20181105232659.png)
