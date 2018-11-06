@@ -9,7 +9,7 @@ categories: [综合]
 
 * SQL审核平台，支持SQL审核、SQL优化(SQLAdvisor|SOAR|SQLTuning)、脱敏查询、慢日志管理、数据库审核、表结构同步、会话管理
 
-github:https://github.com/hhyo/archery
+* github:https://github.com/hhyo/archery
 
 <!--more-->
 
@@ -20,7 +20,7 @@ git clone https://github.com/hhyo/archery.git
 
 ### 2、修改mongo和mysql的用户名密码和连接地址：
 ```java
-vi archery/settings.py
+vi archery/archery/settings.py
 ```
 
 ```java
