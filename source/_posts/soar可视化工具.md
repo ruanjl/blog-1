@@ -19,7 +19,7 @@ categories: [综合]
 * Flask
 
 Python 环境未安装的可参考下面操作：
-```
+```java
 Windows：
 step 1 去 python 官网下载安装 python3 (已安装可跳过此步骤)
 setp 2 pip install Flask
@@ -39,7 +39,7 @@ setp 2 pip install Flask
 
 
 ## 安装与使用
-```
+```java
 Windows： run.bat
 Linux or Mac： sh run.sh
 ```
