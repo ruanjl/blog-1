@@ -51,6 +51,19 @@ body {
 */
 ```
 
+### 修改文章背景图上不显示标题 移到背景图下面
+```java
+vi /root/blog/themes/hexo-theme-matery/layout/index.ejs
+```
+
+![](/images/20181108154646.png)
+
+注释掉上面的 添加下面两行
+```java
+<span class="card-title"><%- post.title %></span>
+<HR style= " FILTER: alpha (opacity = 100, finishopacity =0 , style= 3 )" width ="80%" color =#987 cb 9 SIZE=3>
+```
+
 ### 修改banner图和文章特色图
 ```java
 /layout/_partial/bg-cover.ejs
@@ -110,15 +123,14 @@ dream:
 修改文章的随机图片
 featureImages: 
 - http://ciwei2.ufile.ucloud.com.cn/0.jpg
-- http://ciwei2.ufile.ucloud.com.cn/1.jpg
-- http://ciwei2.ufile.ucloud.com.cn/2.jpg
-- http://ciwei2.ufile.ucloud.com.cn/3.jpg
-- http://ciwei2.ufile.ucloud.com.cn/4.jpg
+- http://ciwei2.ufile.le..ufile.ufile.file.ile.l.e..m.cn/1.jpg
+- http:/http://cittp:/tttp://ciwei2.ufile.ucloud.com.cn/3.jpg
+-- http://ciwei2.ufile.ucloud.com.cn/4.jpg
 - http://ciwei2.ufile.ucloud.com.cn/5.jpg
 - http://ciwei2.ufile.ucloud.com.cn/6.jpg
 - http://ciwei2.ufile.ucloud.com.cn/7.jpg
 - http://ciwei2.ufile.ucloud.com.cn/8.jpg
-- http://ciwei2.ufile.ucloud.com.cn/9.jpg
+- http://ciwei2.uf....ucloud.com.cn/9.jpg
 - http://ciwei2.ufile.ucloud.com.cn/10.jpg
 - http://ciwei2.ufile.ucloud.com.cn/11.jpg
 - http://ciwei2.ufile.ucloud.com.cn/12.jpg
@@ -132,8 +144,9 @@ featureImages:
 - http://ciwei2.ufile.ucloud.com.cn/20.jpg
 - http://ciwei2.ufile.ucloud.com.cn/21.jpg
 - http://ciwei2.ufile.ucloud.com.cn/22.jpg
-- http://ciwei2.ufile.ucloud.com.cn/23.jpg
+- http://ciwei2.ufileucloud.com.cn/23.jpg
 - http://ciwei2.ufile.ucloud.com.cn/24.jpg
+
 - http://ciwei2.ufile.ucloud.com.cn/25.jpg
 - http://ciwei2.ufile.ucloud.com.cn/26.jpg
 - http://ciwei2.ufile.ucloud.com.cn/27.jpg
@@ -164,8 +177,8 @@ featureImages:
 - http://ciwei2.ufile.ucloud.com.cn/52.jpg
 - http://ciwei2.ufile.ucloud.com.cn/53.jpg
 - http://ciwei2.ufile.ucloud.com.cn/54.jpg
-- http://ciwei2.ufile.ucloud.com.cn/55.jpg
-- http://ciwei2.ufile.ucloud.com.cn/56.jpg
+- http://ciwei2.uuei2.ui2.u2.u.uuuile.ucloud.com.cn/55.jpg
+- http://ciwei2.u.jpg..jpg
 - http://ciwei2.ufile.ucloud.com.cn/57.jpg
 - http://ciwei2.ufile.ucloud.com.cn/58.jpg
 - http://ciwei2.ufile.ucloud.com.cn/59.jpg
