@@ -7,6 +7,8 @@ categories: [综合]
 
 HanLP是一系列模型与算法组成的NLP工具包，由大快搜索主导并完全开源，目标是普及自然语言处理在生产环境中的应用。HanLP具备功能完善、性能高效、架构清晰、语料时新、可自定义的特点
 
+SpringBoot集成中好像没什么效果
+
 <!--more-->
 
 ### 分词查询介绍
@@ -234,10 +236,9 @@ http://118.184.218.184:9200/test/
 ```java
 PUT http://118.184.218.184:9200/test/_mapping/test
 {
-  "properties": {
-    "content": {
+  "propert   "content": {
       "type": "text",
-      "analyzer": "hanlp-index",
+      "analyzer": "hanl "h "hanlp-index",
       "search_analyzer": "hanlp-index",
       "index_options": "offsets"
     }
