@@ -35,6 +35,7 @@ Springboot2.1.1+elasticsearch6.5.3搭建的企业级搜索平台，支持PB级�
     ```bin/elasticsearch-plugin install https://github.com/medcl/elasticsearch-analysis-ik/releases/download/v6.5.3/elasticsearch-analysis-ik-6.5.3.zip```
 3. essearch <br/>
     标准springboot项目，导入IDE运行即可。
+    
 #### 四、essearch配置说明
 
 1. 修改```application.properties->spring.data.elasticsearch.cluster-nodes```  elasticsearch地址
@@ -74,12 +75,55 @@ http://localhost:8080/query_hit?keyword=我爱你无印良品苏州&indexName=or
 
 建议搜索：
 ```java
+普通建议搜索 根据传来的keyword匹配
 http://localhost:8080/suggest?keyword=无印良品
 response:
 [
     "无印良品 MUJI 基础润肤化妆水",
     "无印良品水"
 ]
+```
+
+```java
+高级建议搜索 根据传来的keyword进行分词后匹配
+http://localhost:8080/suggestIk?keyword=无印良品
+response:
+[
+    "无印良品的按时都是额荣耀",
+    "荣耀永远绽放2"
+]
+```
+
+```java
+分词查询接口
+http://localhost:8080/ik?index=orders&ikKeyword=我爱你苏州
+[
+    "我爱你",
+    "爱你",
+    "苏州"
+]
+```
+
+```java
+添加数据接口
+POST请求
+http://localhost:8080/save
+{
+	"productDesc": "无印良品 MUJI 基础润肤化妆水 高保湿型 200ml苏州",
+	"createTime": 1545104427407,
+	"updateTime": 1545104427407,
+	"id": "154510442740605",
+	"productName": "无印良品的按时都是额荣耀"
+}
+```
+
+```java
+查看索引
+GET http://localhost:9200/orders/_mapping
+删除索引
+DELETE http://localhost:9200/orders
+查看索引的数据
+GET http://localhost:9200/orders/_search
 ```
 
 分词搜索分页：
@@ -157,3 +201,5 @@ response:
 [备份地址](https://github.com/ciweigg2/springboot-elasticsearch-ik-suggest)
 
 [源码地址](https://gitee.com/11230595/springboot-elasticsearch)
+
+[拼音分词](https://ciweigg2.github.io/2018/11/10/springboot-shi-yong-elasticsearch-analysis-pinyin-zhong-wen-fen-ci/)
