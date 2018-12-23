@@ -57,7 +57,7 @@ Springboot2.1.1+elasticsearch6.5.3搭建的企业级搜索平台，支持PB级�
 
 添加数据：
 ```java
-http://localhost:8080/save?id=1&productName=无印良品 MUJI 基础润肤化妆水&productDesc=无印良品 MUJI 基础润肤化妆水 高保湿型 200ml&createTime=1545104229&updateTime=1545104229
+http://localhost:8080/save
 
 {
 	"productDesc": "无印良品 MUJI 基础润肤化妆水 高保湿型 200ml苏州",
@@ -203,3 +203,5 @@ response:
 [源码地址](https://gitee.com/11230595/springboot-elasticsearch)
 
 [拼音分词](https://ciweigg2.github.io/2018/11/10/springboot-shi-yong-elasticsearch-analysis-pinyin-zhong-wen-fen-ci/)
+
+[hanlp分词](https://ciweigg2.github.io/2018/12/22/an-zhuang-fen-ci-elasticsearch-analysis-hanlp/)

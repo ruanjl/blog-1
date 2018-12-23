@@ -48,7 +48,7 @@ root=/usr/share/elasticsearch/plugins/analysis-hanlp/
 docker restart <容器名>
 ```
 
-### 添加自定义词典
+### 添加自定义词典热更新
 ```java
 cd /usr/share/elasticsearch/plugins/analysis-hanlp/data/dictionary/custom
 vi Test.txt
