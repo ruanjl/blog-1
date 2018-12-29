@@ -74,7 +74,7 @@ pagination_dir: page
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
 theme: hexo-theme-matery
-# theme: hexo-theme-gal
+#theme: hexo-theme-Annie
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
@@ -154,4 +154,10 @@ prism_plugin:
   mode: 'preprocess'    # realtime/preprocess
   theme: 'base16-ateliersulphurpool.light'
   line_number: false    # default false
-  custom_css:
+  custom_css: 
+
+#search:
+#  path: search.json
+#  zipPath: search.zip
+#  versionPath: searchVersion.txt
+#  field: post
