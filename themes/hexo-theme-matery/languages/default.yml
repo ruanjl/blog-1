@@ -5,7 +5,9 @@ tag: Tag
 tags: Tags
 archives: Archives
 about: About
+friends: Friends
 recommendedPosts: Recommended Posts
+read: Read
 readMore: Read more
 toc: TOC
 reprint: Reprint please specify
@@ -31,3 +33,6 @@ myProjects: My Projects
 mySkills: My Skills
 otherSkills: Other Skills
 gallery: Gallery
+from: From
+author: Author
+link: Link

@@ -114,4 +114,27 @@ public class User {
 
 ![](/images/20190113142224.png)
 
+### json配置的测试
+
+![](/images/20190113170256.png)
+
+```java
+       try {
+            String serverAddr = "118.184.218.184:8848";
+            String dataId = "json";
+            String group = "DEFAULT_GROUP";
+            Properties properties = new Properties();
+            properties.put("serverAddr", serverAddr);
+            //这里设置了dev空间的配置
+            properties.put("namespace" ,"7d32a129-a6ca-4ba1-a75e-96aaed89da33");
+            ConfigService configService = NacosFactory.createConfigService(properties);
+            // Actively get the configuration.
+            String content = configService.getConfig(dataId, group, 5000);
+            System.out.println(content);
+        } catch (NacosException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+```
+
 demo：https://github.com/ciweigg2/springboot-nacos-config.git

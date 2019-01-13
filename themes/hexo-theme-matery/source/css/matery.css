@@ -28,7 +28,7 @@
 }
 
 body {
-    background-color: #ffffff;
+    background-color: #eaeaea;
     margin: 0;
     color: #34495e;
 }
@@ -123,6 +123,7 @@ pre[class*="language-"] {
 code[class*="language-"],
 pre[class*="language-"] {
     color: #e8eaf6;
+    white-space: pre-wrap !important;
 }
 
 b,
@@ -161,7 +162,7 @@ mark {
 }
 
 .bg-color {
-    background-image: linear-gradient(to right, #4cbf30 0%, #0f9d58 100%);
+    background-image: linear-gradient(to right, #304fbf 0%, #a0c3b2 100%);
 }
 
 .text-color {
@@ -302,7 +303,7 @@ header .side-nav .social-link {
 .cover-btns a:hover {
     border: 1px solid #f44336;
     background-color: #f44336;
-    box-shadow: 0 14px 26px -12px rgba(233, 30, 99, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(233, 30, 99, 0.2);
+    box-shadow: 0 14px 26px -12px rgba(233, 30, 99, 0.42), 0 4px 23px 0 rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(233, 30, 99, 0.2);
 }
 
 .cover-btns a i {
@@ -397,7 +398,7 @@ header .go-back i {
     font-size: 1.9rem;
 }
 
-@-webkit-keyframes rainbow {
+/*@-webkit-keyframes rainbow {
     0%,
     100% {
         background: rgba(156, 39, 176, 0.75);
@@ -475,7 +476,7 @@ header .go-back i {
         background: -moz-linear-gradient(135deg, rgba(233, 30, 99, 0.75) 0%, rgba(233, 30, 99, 0.65) 100%);
         background: -webkit-linear-gradient(135deg, rgba(2233, 30, 99, 0.75) 0%, rgba(233, 30, 99, 0.65) 100%);
     }
-}
+}*/
 
 .recommend {
     margin-top: 20px;
@@ -763,6 +764,13 @@ article .article-tags .chip {
     margin-top: -60px;
 }
 
+/* 修改小屏幕下文章详情table样式. */
+@media only screen and (max-width: 550px) {
+    #articleContent table{
+        table-layout: fixed;
+    }
+}
+
 @media only screen and (min-width: 1418px) {
     #artDetail {
         margin-top: -60px;
@@ -822,6 +830,11 @@ article .article-tags .chip {
 }
 
 #artDetail .post-info .post-date {
+    color: #525f7f;
+}
+
+#artDetail .post-info .post-read {
+    margin-left: 15px;
     color: #525f7f;
 }
 
@@ -1515,12 +1528,16 @@ footer {
     padding-bottom: 1px;
 }
 
+footer .social-statis {
+    margin-top: 10px;
+}
+
 footer a {
     color: #fff;
 }
 
 footer .copy-right {
-    color: #d5d5d5;
+    color: #d9d9d9;
 }
 
 /*搜索层样式*/

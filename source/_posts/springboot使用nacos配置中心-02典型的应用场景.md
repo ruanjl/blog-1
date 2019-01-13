@@ -1,4 +1,4 @@
-title: springboot使用nacos配置中心-02典https://github.com/ciweigg2/nacos-spring-boot-config-mysql.git型的应用场景
+title: springboot使用nacos配置中心-02典型的应用场景
 date: 2019-01-13 14:23:57
 tags: [nacos,nacos-config]
 categories: [nacos]
